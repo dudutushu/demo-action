@@ -1,0 +1,51 @@
+int: 10
+float: 9.99
+bool: true  # true、false
+# 时间采用 ISO8601 格式 1点被转成9点
+date: 2015-08-23   # 日期
+datetime: 2015-08-23T02:02:00.1z  # 日期时间
+iso8601: 2015-08-23t21:59:43.10-05:00  # iso8601 日期格式
+spaced: 2015-08-23 21:59:43.10 -5      #
+
+
+# 对象：缩进方式
+obj:
+  field1: x
+  field2:
+    field21: xx
+    field22: xxx
+
+# 对象：行内方式(和json格式差不多)
+obj2: { field1: 'x', field2: { field21: 'xx', field22: 'xxx' } }
+
+
+# 数组：连字符方式，如果元素也是数组就再使用一层缩进
+array:
+- ele1
+- ele2
+- - ele31
+  - ele32
+
+# 行内方式
+array2: [ 'ele1', 'ele2', [ 'ele31', 'ele32' ] ]
+
+# 数组中的原始是对象
+array3:
+- field1: x
+  field2: xx
+  field3: xxx
+- field1: x
+  field2: xx
+  field3: xxx
+
+# 嵌套方式
+nested:
+  field1: x
+  arr:
+  - {field1: x, field2: x, field3: [1, 2, 3]}
+  - {field1: x, field2: x, field3: [2, 3, 4]}
+  arr2:
+  - - a
+    - b
+  - - c
+    - c
